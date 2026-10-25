@@ -35,11 +35,11 @@ public class Florida_Dental {
 
         int famSize = getFamilySize();
 
-        String[] names = new String[famSize];
+        String[] famNames = new String[famSize];
 
-        char[][][] teeth = new char[famSize][TEETH_LAYERS][NUMBER_OF_TEETH];
+        char[][][] famTeeth = new char[famSize][TEETH_LAYERS][NUMBER_OF_TEETH];
 
-        getFamilyRecords(names, teeth);
+        getFamilyRecords(famNames, famTeeth);
 
         char choice;
         do {
@@ -52,13 +52,13 @@ public class Florida_Dental {
                     keyboard.next().charAt(0));
 
             if (choice == PRINT_RECORDS) {
-                printRecords(names, teeth);
+                printRecords(famNames, famTeeth);
             }
             else if (choice == EXTRACT_TOOTH) {
-                editTooth(names, teeth);
+                editTooth(famNames, famTeeth);
             }
             else if (choice == CALCULATE_ROOTS) {
-                calculateRoots(teeth);
+                calculateRoots(famTeeth);
             }
             else if (choice == EXIT_PROGRAM) {
 
